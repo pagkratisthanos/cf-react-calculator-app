@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-calc-bg: #0f172a;
+  --color-calc-card: #1e293b;
+  --color-calc-display: #0f172a;
+  --color-calc-gray: #475569;
+  --color-calc-blue: #3b82f6;
+  --color-calc-red: #ef4444;
+  --color-calc-orange: #fb923c;
+}
