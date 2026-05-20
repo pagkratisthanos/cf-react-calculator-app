@@ -87,7 +87,7 @@ const Calculator = () => {
                 <div className="grid grid-cols-4 gap-2">
                     {/* Row 1 */}
                     <CalcButton label="Clear" onClick={handleClear} color="red" wide />
-                    <CalcButton label="%" onClick={() => {handlePercent()}} />
+                    <CalcButton label="%" onClick={() => {handlePercent()}} color="blue" />
                     <CalcButton label="+" onClick={() => handleOperator("+")} color="blue" />
 
                     {/* Row 2 */}
