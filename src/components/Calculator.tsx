@@ -68,6 +68,14 @@ const Calculator = () => {
         setState(initialState);
     };
 
+    const handlePercent = () => {
+        if (state.currentValue === "0") return;
+        setState(prev => ({
+            ...prev,
+            currentValue: String(parseFloat(prev.currentValue) / 100),
+        }));
+    };
+
     return (
         <div className="min-h-screen bg-calc-bg flex items-center justify-center">
             <div className="bg-calc-card p-6 rounded-2xl w-72">
@@ -79,7 +87,7 @@ const Calculator = () => {
                 <div className="grid grid-cols-4 gap-2">
                     {/* Row 1 */}
                     <CalcButton label="Clear" onClick={handleClear} color="red" wide />
-                    <CalcButton label="%" onClick={() => {}} />
+                    <CalcButton label="%" onClick={() => {handlePercent()}} />
                     <CalcButton label="+" onClick={() => handleOperator("+")} color="blue" />
 
                     {/* Row 2 */}
